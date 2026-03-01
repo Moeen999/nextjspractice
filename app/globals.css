@@ -1,26 +1,48 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #0a0a0a;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme inline{
+    --font-urbanist:var(--font-urbanist)
+    --font-worksans:var(--font-work-sans)
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.gridClass{
+    display: flex;
+    max-width: 100dvw;
+    gap: 4rem;
+    padding-inline: 4rem;
+    height: 4rem;
+    align-items: center;
+    background-color: cadetblue;
+    justify-content: space-between;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.links{
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+@media (max-width:598px) {
+    .links{
+        display: none;
+    }   
+}
+
+a{
+    text-decoration: none;
 }
